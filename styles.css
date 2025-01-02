@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Salita&display=swap");
+
+body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif, sans-serif;
+    background: linear-gradient(180deg, #000000, #2a1733);
+    color: white;
+    overflow: hidden;
+    height: 100vh; /* Full viewport height */
+}
+
+main {
+    padding: 40px;
+    height: calc(100vh - 80px); /* Subtract height of input container */
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-container {
+    font-family: 'Salita', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: none;
+    position: relative;
+    margin-left: 20%;
+    margin-right: 0;
+}
+
+.greeting h1 {
+    align-items: flex-start;
+    position: relative;
+}
+
+p {
+    align-items: flex-end;
+    font-size: 1.5rem;
+    margin-top: -20px;
+}
+
+hr {
+    margin-top: -10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Style for the chat history container */
+#chat-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 80px; /* Leave space for input container */
+    overflow-y: scroll; /* Enable scrolling */
+    scrollbar-width: none; /* Firefox: Hide scrollbar */
+    scrollbar-color: #b96ac9 #222; /* Firefox: thumb color, track color */
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; 
+}
+
+#chat-history::-webkit-scrollbar {
+    display: none; /* Webkit: Hide scrollbar */
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; 
+}
+
+.user-message {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: auto;
+    position: relative;
+    max-width: 80%;
+    align-self: flex-end;
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; 
+}
+
+.user-message::before {
+    position: absolute;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+}
+
+.bot-message {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: auto;
+    position: relative;
+    max-width: 80%;
+    align-self: flex-start;
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; 
+}
+
+.bot-message::before {
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+}
+
+.messages .user img, .messages .bot img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.input-container {
+    display: flex;
+    position: fixed;
+    bottom: 20px; /* Keep input container at the bottom */
+    left: 20%;
+    right: 20%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    background-color: #9f4fa7;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+    p {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    .input-container {
+        left: 5%;
+        right: 5%;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    .messages .user img, .messages .bot img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    p {
+        font-size: 1rem;
+    }
+
+    .input-container {
+        left: 5%;
+        right: 5%;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .messages .user img, .messages .bot img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* For 1920x1080 resolution */
+@media screen and (max-width: 2560px) {
+    .chat-container {
+        margin-left: 20%; /* Adjust margins for wider screens */
+        margin-right: 20%;
+        height: 76%; /* Slightly taller */
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        position: relative;
+    }
+}
+
+/* For laptop screens (1366px or similar) */
+@media screen and (max-width: 1440px) {
+    .chat-container {
+        margin-left: 20%; /* Adjust margins for smaller laptops */
+        margin-right: 20%;
+        height: 80%; /* Slightly shorter */
+    }
+}
+
+/* For tablets or small devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        margin-left: 20%;
+        margin-right: 20%;
+        height: 80%;
+    }
+}
