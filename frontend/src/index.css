@@ -1,22 +1,52 @@
+:root {
+  --navbar-default: #1e1e1e;
+  --texts-all: white;
+  --text-earth: #795548;
+  --base-purple: #9c27b0;
+  --base-gradient: #9c27b0;
+  --base-gradient-2: #ff3b30;
+  --blend-mode: hard-light;
+  --nav-logo: white;
+  --mode-color: #ffc400;
+  --moon-color: white;
+  --circle-bg: #9c27b0;
+  --circle-bg: #ff3b30;
+}
+
+.light {
+  --navbar-default: #ffffff;
+  --texts-all: black;
+  --text-earth: #126c00;
+  --base-purple: #9c27b0;
+  --base-gradient: #693ab0;
+  --base-gradient-2: black;
+  --blend-mode: none;
+  --nav-logo: black;
+  --mode-color: lightgray;
+  --moon-color: var(--base-gradient);
+  --circle-bg: #9c27b0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1E1E1E;
-  color: white;
+  background-color: var(--navbar-default);
+  color: var(--texts-all);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 @font-face {
-  font-family: 'Salita';
-  src: url('./assests/fonts/Salita.ttf') format('truetype');
+  font-family: "Salita";
+  src: url("../src/assests/fonts/Salita.ttf") format("truetype");
 }
 
 * {
@@ -25,7 +55,15 @@ code {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.3;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }

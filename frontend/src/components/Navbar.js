@@ -4,6 +4,7 @@ import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import light from '../assests/images/light.svg';
 import darkWhite from '../assests/images/dark-white.svg';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -18,11 +19,14 @@ const Navbar = () => {
     if (darkMode) {
       document.body.style.backgroundColor = "#1E1E1E"; // Dark background
       localStorage.setItem('theme', 'dark'); // Store preference
+      document.getElementById('root')?.classList.remove('light');
     } else {
-      document.body.style.backgroundColor = "#ffffff"; // Light background
+      document.body.style.backgroundColor = "#FFFFFF"; // Light background
       localStorage.setItem('theme', 'light'); // Store preference
+      document.getElementById('root')?.classList.add('light');
     }
   }, [darkMode]);
+  
 
   // Load theme preference from localStorage
   useEffect(() => {
@@ -42,11 +46,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-mode">
-        <img src={darkWhite} alt="dark" />
+        <DarkModeOutlinedIcon style={{color:"var(--moon-color)"}}/>
         {darkMode ? (
-          <ToggleOnIcon fontSize="large" color="primary" onClick={handleDarkMode} />
+          <ToggleOnIcon fontSize="large" color="primary" onClick={handleDarkMode}style={{fontSize:"45px"}} />
         ) : (
-          <ToggleOffIcon fontSize="large" color="black" onClick={handleDarkMode} />
+          <ToggleOffIcon fontSize="large" style={{color:"lightgray",fontSize:"45px"}} onClick={handleDarkMode} />
         )}
         <img src={light} alt="light" />
       </div>

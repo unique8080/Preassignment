@@ -1,12 +1,3 @@
-@media (prefers-color-scheme: light) {
-  .navbar { 
-    background-color: #FFFFFF; 
-  }
-  .navbar-texts {
-    color: black; 
-  }
-}
-
 @media (min-width: 1441px) {
   .navbar {
     max-width: 1440px;
@@ -20,7 +11,7 @@
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
-  background-color: #1E1E1E; /* Default dark mode background */
+  background-color: var(--navbar-default); /* Default dark mode background */
   width: 100%;
   z-index: 1;
 }
@@ -32,6 +23,7 @@
   font-family: "Salita";
 }
 .navbar-texts #brand-logo {
+  color: var(--nav-logo);
   font-size: 36px;
 }
 .navbar-texts #brand-logo:hover {
@@ -47,7 +39,7 @@
 .navbar-texts .navbar-links a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: white; /* Default dark mode text color */
+  color: var(--texts-all);
 }
 .navbar-texts .navbar-links a:hover {
   background: linear-gradient(90deg, #ff6b6b, #f94d94);

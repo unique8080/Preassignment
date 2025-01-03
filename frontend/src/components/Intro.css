@@ -4,7 +4,10 @@
   padding: 30px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  height: 100vh;
+  color: var(--texts-all);
+  /* animation: appear 2s ease-in-out; */
+  scroll-snap-align: start;
 }
 .description {
   display: flex;
@@ -12,31 +15,29 @@
   gap: 20px;
 }
 #label {
-  background-color: #00b5ad;
-  padding: 5px;
-  padding-right: 20px;
+  color: white;
+  background-color: #00B5AD;
+  padding: 5px 20px 8px 5px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   font-family: "Salita";
-  padding-top: 8px;
   width: fit-content;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 #label:hover {
-  background-color: #007d76;
-  box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
+  background-color: #00B5AD;
+  box-shadow: 0 0 15px 5px #00B5AD; /* Add glow effect */
 }
 .intro h1 {
   font-family: "Salita";
   font-size: 64px;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 .intro #sub-head-1 {
-  color: #795548;
+  color: var(--text-earth);
 }
 .intro #sub-head-2 {
-  color: #9c27b0;
+  color: var(--base-purple);
 }
 .intro .btns {
   display: flex;
@@ -45,7 +46,8 @@
   gap: 20px;
 }
 .intro #intro-button {
-  background-color: #007aff;
+  color: white;
+  background-color: #007AFF;
   font-family: "Salita";
   padding: 7px;
   font-size: 22px;
@@ -53,18 +55,18 @@
   cursor: pointer;
 }
 .intro #intro-button:hover {
-  background-color: #0056b3;
+  background-color: #026fe3;
 }
 .intro #intro-button-github {
-  background-color: #24292e;
+  /* background-color: var(--navbar-default); */
   font-family: "Salita";
   padding: 8px;
   font-size: 22px;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
-  border: 1px solid #9c27b0;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  color: var(--texts-all);
+  border: 1px solid var(--base-purple);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .intro p {
   font-family: "Saira";
@@ -72,28 +74,27 @@
   text-overflow: clip;
 }
 .intro #intro-button-github:hover {
-  background-color: #181c20;
-  box-shadow: 0 0 15px 5px #9c27b0; /* Add glow effect */
+  /* background-color: var(--base-purple); */
+  box-shadow: 0 0 15px 5px var(--base-purple); /* Add glow effect */
 }
 
 /* images */
 
 .intro-images .circle-bg {
   position: relative;
-  background-image: linear-gradient(45deg, #9c27b0, #ff3b30);
-  mix-blend-mode: hard-light;
+  background-image: linear-gradient(180deg, var(--base-gradient), var(--base-gradient-2));
+  mix-blend-mode: var(--blend-mode);
   border-radius: 50%;
   width: 500px;
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 100px;
-  margin-left: 200px;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  margin: 0 100px 0 200px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .intro-images .circle-bg:hover {
-  box-shadow: 0 0 15px 5px red; /* Add glow effect */
+  box-shadow: 0 0 15px 5px var(--circle-bg); /* Add glow effect */
 }
 .circle-bg img {
   width: 200px;
@@ -104,12 +105,12 @@
   top: 60px;
   right: 120px;
   border-radius: 10px;
-  border: 1px solid #00b5ad;
+  border: 1px solid #007AFF;
 }
 .circle-bg img:nth-child(2) {
   bottom: 100px;
   right: 50px;
-  border: 1px solid orange;
+  border: 1px solid #00B5AD;
   border-radius: 5px;
 }
 .circle-bg img:nth-child(3) {
@@ -121,13 +122,10 @@
 
 @media (prefers-color-scheme: light) {
   .intro #sub-head-1 {
-    color: red; /* Adding !important to make it force the color change */
+    color: var(--text-earth);
   }
 }
-@media (min-width: 768px) {
-  .intro {
-    margin-top: 50px;
-  }
+@media (max-width: 768px) {
   .intro h1 {
     font-size: 64px;
   }
@@ -155,14 +153,14 @@
     .intro{
         flex-direction: column-reverse;
         text-align: center;
-        margin-top: 70px;
+        /* margin-top: 70px; */
     }
   .intro h1 {
     font-size: 40px;
   }
   #label {
-    background-color: #007d76;
-    box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
+    background-color: var(--base-gradient-2);
+    box-shadow: 0 0 15px 5px var(--base-gradient); /* Add glow effect */
   }
   .intro .description {
     flex-direction: column;

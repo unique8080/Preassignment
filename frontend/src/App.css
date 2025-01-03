@@ -32,3 +32,14 @@
     
   }
 }
+
+.app{
+  scroll-snap-type: y mandatory;
+  overflow-y:scroll ;
+  height: 100vh;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.app::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}

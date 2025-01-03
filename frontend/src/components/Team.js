@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Arafat from "../assests/images/Arafat.jpeg";
 import Rahul from "../assests/images/rahulpic.jpg";
-
+import bug from "../assests/images/bug.svg"
 const Team = () => {
   const members = [
     {
@@ -62,7 +62,10 @@ const Team = () => {
 
   return (
     <div className="team">
-      <h1>Meet the Team</h1>
+      <div className="title">
+      <h1>the DebugeDuo</h1>
+      <img src={bug}/>
+      </div>
       <div className="members">
         <div className="member">
           <div className="member-details">
