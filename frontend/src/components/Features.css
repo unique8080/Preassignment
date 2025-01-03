@@ -1,0 +1,27 @@
+.feature-container h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Salita';
+}
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 2rem 0;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+}
+.feature h2{
+    font-family: 'Salita';
+    color: #9C27B0;
+    margin-bottom: 0px;
+}
