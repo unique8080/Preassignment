@@ -1,123 +1,203 @@
-.intro{
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
+.intro {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
 }
-.description{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-#label{
-    background-color: #00B5AD;
-    padding: 5px;
-    padding-right: 20px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    font-family: 'Salita';
-    padding-top: 8px;
-    width: fit-content;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-
+#label {
+  background-color: #00b5ad;
+  padding: 5px;
+  padding-right: 20px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: "Salita";
+  padding-top: 8px;
+  width: fit-content;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
-#label:hover{
-    background-color: #007D76;
-    box-shadow: 0 0 15px 5px #00B5AD; /* Add glow effect */
+#label:hover {
+  background-color: #007d76;
+  box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
 }
-.intro h1{
-    font-family: 'Salita';
-    font-size: 64px;
-    margin-top: 0;
-    margin-bottom: 0;
+.intro h1 {
+  font-family: "Salita";
+  font-size: 64px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.intro #sub-head-1{
-    color: #795548;
+.intro #sub-head-1 {
+  color: #795548;
 }
-.intro #sub-head-2{
-    color: #9C27B0;
+.intro #sub-head-2 {
+  color: #9c27b0;
 }
-.intro .btns{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    gap: 20px;
+.intro .btns {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 20px;
 }
-.intro #intro-button{
-    background-color: #007AFF;
-    font-family: 'Salita';
-    padding: 7px;
-    font-size: 22px;
-    border-radius: 3px;
-    cursor: pointer;
+.intro #intro-button {
+  background-color: #007aff;
+  font-family: "Salita";
+  padding: 7px;
+  font-size: 22px;
+  border-radius: 3px;
+  cursor: pointer;
 }
-.intro #intro-button:hover{
-    background-color: #0056B3;
+.intro #intro-button:hover {
+  background-color: #0056b3;
 }
-.intro #intro-button-github{
-    background-color: #24292E;
-    font-family: 'Salita';
-    padding: 8px;
-    font-size: 22px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    border: 1px solid #9C27B0;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-
+.intro #intro-button-github {
+  background-color: #24292e;
+  font-family: "Salita";
+  padding: 8px;
+  font-size: 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid #9c27b0;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
-.intro p{
-    font-family: 'Saira';
-    font-size: 22px;
-    text-overflow: clip;
+.intro p {
+  font-family: "Saira";
+  font-size: 22px;
+  text-overflow: clip;
 }
-.intro #intro-button-github:hover{
-    background-color: #181C20;
-    box-shadow: 0 0 15px 5px #9C27B0; /* Add glow effect */
-
+.intro #intro-button-github:hover {
+  background-color: #181c20;
+  box-shadow: 0 0 15px 5px #9c27b0; /* Add glow effect */
 }
 
 /* images */
 
-.intro-images .circle-bg{
-    position: relative;
-    background-image:linear-gradient(45deg, #9C27B0, #FF3B30);
-    mix-blend-mode: hard-light;
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-    margin-left: 200px;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+.intro-images .circle-bg {
+  position: relative;
+  background-image: linear-gradient(45deg, #9c27b0, #ff3b30);
+  mix-blend-mode: hard-light;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  margin-left: 200px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
-.intro-images .circle-bg:hover{
-    box-shadow: 0 0 15px 5px red; /* Add glow effect */
+.intro-images .circle-bg:hover {
+  box-shadow: 0 0 15px 5px red; /* Add glow effect */
 }
-.circle-bg img{
+.circle-bg img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+.circle-bg img:nth-child(1) {
+  top: 60px;
+  right: 120px;
+  border-radius: 10px;
+  border: 1px solid #00b5ad;
+}
+.circle-bg img:nth-child(2) {
+  bottom: 100px;
+  right: 50px;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+.circle-bg img:nth-child(3) {
+  bottom: 150px;
+  left: 30px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+@media (prefers-color-scheme: light) {
+  .intro #sub-head-1 {
+    color: red; /* Adding !important to make it force the color change */
+  }
+}
+@media (min-width: 768px) {
+  .intro {
+    margin-top: 50px;
+  }
+  .intro h1 {
+    font-size: 64px;
+  }
+  .intro #intro-button {
+    padding: 10px;
+    font-size: 24px;
+  }
+  .intro #intro-button-github {
+    padding: 12px;
+    font-size: 24px;
+  }
+  .intro p {
+    font-size: 24px;
+  }
+  .intro-images .circle-bg {
+    margin-left: 50px;
+  }
+  .circle-bg img {
     width: 200px;
     height: 200px;
-    position: absolute;
+  }
 }
-.circle-bg img:nth-child(1){
-    top: 60px;
-    right: 120px;
-    border-radius: 10px;
-    border: 1px solid #00B5AD;
-}
-.circle-bg img:nth-child(2){
-    bottom: 100px;
-    right: 50px;
-    border: 1px solid orange;
-    border-radius: 5px;
-}
-.circle-bg img:nth-child(3){
-    bottom: 150px;
-    left: 30px;
-    border-radius: 50%;
-    border: 1px solid red;
+
+@media (max-width: 1024px) {
+    .intro{
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 70px;
+    }
+  .intro h1 {
+    font-size: 40px;
+  }
+  #label {
+    background-color: #007d76;
+    box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
+  }
+  .intro .description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .intro #subtext{
+    font-size: 20px;
+  }
+  .intro .btns {
+    font-size: 18px;
+  }
+  .intro #intro-button {
+    font-size: small;
+    padding: 2px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro #intro-button-github {
+    font-size: medium;
+    padding: 2px;
+  }
+  .intro p {
+    font-size: 26px;
+  }
+  .intro-images .circle-bg {
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 400px;
+    height: 400px;
+  }
+  .circle-bg img {
+    width: 150px;
+    height: 150px;
+  }
 }

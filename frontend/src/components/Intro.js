@@ -20,7 +20,7 @@ const Intro = () => {
         </p>
         <div className="btns">
         <a id="intro-button">Chat</a>
-        <a id="intro-button-github"><GitHubIcon/> Repository</a>
+        <a id="intro-button-github" href="https://github.com/rahulaauji-30/pre-hackathon-assignment-levelsupermind.git" target="_blank"><GitHubIcon/> Repository</a>
         </div>
       </div>
       <div className="intro-images">

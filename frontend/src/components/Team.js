@@ -18,6 +18,9 @@ const Team = () => {
       image: Rahul,
       email: "rahulaauji71@gmail.com",
       portfolio: "https://rahulportfolio.com",
+      github:"https://github.com/rahulaauji-30",
+      linkedIn:"https://www.linkedin.com/in/rahul-parihar-028200277"
+
     },
     {
       name: "Arafat Chougle",
@@ -25,17 +28,21 @@ const Team = () => {
       description:
         "Final-year Computer Science student at Vishwakarma University, played a key role in developing the frontend for AstraInsight. With a strong foundation in web technologies, he brought the platform to life using modern design principles, ensuring an intuitive user experience. His expertise in React and UI/UX design was instrumental in delivering a seamless, responsive interface for users.",
       image: Arafat,
-      email: "arafatchougle@example.com",
-      portfolio: "https://arafatportfolio.com",
+      email: "arafatchougle12@gmail.com",
+      portfolio: "https://torquick.com/",
+      github:"https://github.com/unique8080",
+      linkedIn:"https://www.linkedin.com/in/arafat-chougle-8073a5221"
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(1);
   const [showMoreOptions, setShowMoreOptions] = useState(false);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % members.length);
     setShowMoreOptions(false); // Close the options box on next
+    setPrevIndex(currentIndex);
   };
 
   const handlePrev = () => {
@@ -43,6 +50,7 @@ const Team = () => {
       (prevIndex) => (prevIndex - 1 + members.length) % members.length
     );
     setShowMoreOptions(false); // Close the options box on previous
+    setPrevIndex(currentIndex);
   };
 
   const toggleMoreOptions = () => {
@@ -50,6 +58,7 @@ const Team = () => {
   };
 
   const currentMember = members[currentIndex];
+  const prevMember = members[prevIndex];
 
   return (
     <div className="team">
@@ -64,18 +73,25 @@ const Team = () => {
             </div>
             <div className="member-image">
               <img src={currentMember.image} alt={currentMember.name} />
-            </div>
-            <div className="member-next" onClick={handleNext}>
-              <KeyboardArrowRightIcon fontSize="large" />
+              <img className="next-img" onClick={handleNext} src={prevMember.image} alt={currentMember.name} />
             </div>
           </div>
           <div className="member-btm-nav">
             <div className="member-links">
-              <a href="https://github.com" style={{color:"none"}} target="_blank" rel="noopener noreferrer">
-                <GitHubIcon style={{fill:"white"}}/>
+              <a
+                href="https://github.com"
+                style={{ color: "none" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon style={{ fill: "white" }} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon style={{fill:"white"}}/>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon style={{ fill: "white" }} />
               </a>
               <a onClick={toggleMoreOptions} className="more-options">
                 <MoreVertIcon />
@@ -83,7 +99,11 @@ const Team = () => {
               {showMoreOptions && (
                 <div className="more-options-box">
                   <a href={`mailto:${currentMember.email}`}>Email</a>
-                  <a href={currentMember.portfolio} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={currentMember.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Portfolio
                   </a>
                 </div>
