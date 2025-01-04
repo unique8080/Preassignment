@@ -1,0 +1,323 @@
+.team h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Salita";
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--texts-all);
+}
+.team {
+  padding: 30px;
+  color: var(--texts-all);
+  height: 100vh;
+  animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.member {
+  width: 75%;
+}
+.member-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px);
+}
+
+.member .member-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 2rem;
+  width: 50%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  filter: blur(5px);
+  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+.member .member-description {
+  opacity: 1;
+  filter: blur(0);
+}
+.member .member-description:hover {
+  opacity: 1;
+}
+.member-description h1 {
+  text-align: left;
+  font-size: 60px;
+}
+.member-description p {
+  text-align: left;
+  font-family: "Saira";
+  text-wrap: wrap;
+}
+.memeber-role {
+}
+#member-role {
+  background-color: #00b5ad;
+  padding: 5px;
+  padding-right: 20px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: "Salita";
+  padding-top: 8px;
+  width: fit-content;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+#member-role:hover {
+  background-color: #007d76;
+  box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
+}
+.member-image img {
+  margin-left: 280px;
+  width: 250px;
+  height: 300px;
+  background-size: cover;
+}
+.member-image img:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  box-shadow: 0 0 15px 5px purple; /* Add glow effect */
+}
+.member-btm-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 2rem;
+}
+.member-links {
+  display: flex;
+  flex-direction: row;
+  width: fix-content;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+.member-btm-nav .btm-btns {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  gap: 10px;
+}
+.member-next {
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.member-next:active {
+  cursor: pointer;
+  background-color: #aeaeae;
+  transition: ease-in-out 0.3s;
+}
+.btm-btns .left-btn {
+
+  background-color: #eee4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btm-btns .left-btn:hover {
+  background-color: #aeaeae;
+}
+.btm-btns .right-btn {
+  background-color: #eee4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btm-btns .right-btn:hover {
+  background-color: #aeaeae;
+}
+.members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.member2 img {
+  width: 170px;
+  height: 220px;
+  position: absolute;
+  top: 130px;
+  right: 110px;
+  opacity: 0.5;
+  background-size: cover;
+  /* transition: ease-out 0.3s; */
+}
+.member-image img:hover{
+  box-shadow: 0 0 15px 5px #007d76;
+}
+.member-image img:last-child {
+  width: 200px;
+  height: 250px;
+}
+.next-img{
+  display: block;
+  right: -250px;
+  top: 25px;
+  opacity: 0.3;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.member2 img:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  box-shadow: 0 0 15px 5px #007d76; /* Add glow effect */
+  transition: ease-out 0.3s;
+}
+.member2 img.slide-in {
+  width: 280px;
+  height: 250px;
+  position: absolute;
+  top: 130px;
+  right: 110px;
+  opacity: 0.5;
+  background-size: cover;
+  /* transition: ease-out 0.3s; */
+}
+
+.more-options-box {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  right: -70px;
+}
+
+.more-options-box a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.more-options-box a:hover {
+  color: #d32f2f;
+}
+
+.member-btm-nav a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width:786px) {
+  .member-next{
+    height: 57%;
+    right: 106px;
+    opacity: 0.2;
+    color: white;
+  }
+  .team{
+    padding: 10px;
+  }
+  .member-image img:first-child{
+    z-index: 1;
+  }
+  .member-image img:last-child{
+    z-index: -1;
+    width: 150px;
+    height: 280px;
+  }
+  .next-img{
+    display: block;
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+  .member{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .member .member-description{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;
+  }
+  .member-details {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .member-description h1 {
+    font-size: 40px;
+    margin-left: 0;
+  }
+  .member-description p {
+    text-align: center;
+    line-height: 1.5;
+  }
+  .member-image img {
+    margin-left: 0;
+  }
+  .member-btm-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .member2 img {
+    display: none;
+  }
+  .member2 img.slide-in {
+    display: none;
+  }
+  .more-options-box {
+    right: -50px;
+  }
+  #member-role {
+    background-color: #007d76;
+    box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
+  }
+  .btm-btns{
+    display: none;
+  }
+}
+
+.title{
+  position: relative;
+}
+.title img{
+  position: absolute;
+  top: 0;
+  left: 35%;
+}

@@ -1,0 +1,55 @@
+@media (min-width: 1441px) {
+  .navbar {
+    max-width: 1440px;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  background-color: var(--navbar-default); /* Default dark mode background */
+  width: 100%;
+  z-index: 1;
+}
+.navbar-texts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: "Salita";
+}
+.navbar-texts #brand-logo {
+  color: var(--nav-logo);
+  font-size: 36px;
+}
+.navbar-texts #brand-logo:hover {
+  color: #9c27b0;
+  cursor: pointer;
+  transition: ease-in-out;
+}
+.navbar-texts .navbar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.navbar-texts .navbar-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--texts-all);
+}
+.navbar-texts .navbar-links a:hover {
+  background: linear-gradient(90deg, #ff6b6b, #f94d94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: ease-in-out;
+}
+
+.navbar-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

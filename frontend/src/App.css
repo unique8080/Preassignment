@@ -1,0 +1,45 @@
+/* Small Desktop */
+@media (min-width: 1441px) {
+  .app{
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .app{
+    
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .app {
+    
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .app {
+    
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  body {
+    
+  }
+}
+
+.app{
+  scroll-snap-type: y mandatory;
+  overflow-y:scroll ;
+  height: 100vh;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.app::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
