@@ -23,6 +23,8 @@
   transform: translateY(20px);
 }
 
+
+
 .member .member-description {
   display: flex;
   flex-direction: column;
@@ -34,6 +36,7 @@
   opacity: 0;
   filter: blur(5px);
   transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+  font-size: 1.1rem;
 }
 .member .member-description {
   opacity: 1;
@@ -47,18 +50,16 @@
   font-size: 60px;
 }
 .member-description p {
+  margin-top: 10px;
   text-align: left;
   font-family: "Saira";
   text-wrap: wrap;
 }
-.memeber-role {
-}
+
 #member-role {
   background-color: #00b5ad;
   padding: 5px;
-  padding-right: 20px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 5px;
   font-family: "Salita";
   padding-top: 8px;
   width: fit-content;
@@ -73,12 +74,14 @@
   width: 250px;
   height: 300px;
   background-size: cover;
+  border-radius: 10px;
 }
 .member-image img:hover {
   cursor: pointer;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s ease;
   box-shadow: 0 0 15px 5px purple; /* Add glow effect */
 }
+
 .member-btm-nav {
   display: flex;
   flex-direction: row;
@@ -161,10 +164,11 @@
   right: 110px;
   opacity: 0.5;
   background-size: cover;
-  /* transition: ease-out 0.3s; */
+ transition: all 0.3s;
+ border-radius: 5px;
 }
 .member-image img:hover{
-  box-shadow: 0 0 15px 5px #007d76;
+  box-shadow: 0 0 15px 5px #9c27b0;
 }
 .member-image img:last-child {
   width: 200px;
@@ -183,7 +187,7 @@
   cursor: pointer;
   transition: ease-in-out 0.3s;
   box-shadow: 0 0 15px 5px #007d76; /* Add glow effect */
-  transition: ease-out 0.3s;
+  transition: all 0.3s;
 }
 .member2 img.slide-in {
   width: 280px;
@@ -193,7 +197,7 @@
   right: 110px;
   opacity: 0.5;
   background-size: cover;
-  /* transition: ease-out 0.3s; */
+  transition: ease-out 0.3s;
 }
 
 .more-options-box {
@@ -233,6 +237,7 @@
   }
   .team{
     padding: 10px;
+;
   }
   .member-image img:first-child{
     z-index: 1;
@@ -302,4 +307,4 @@
   }
 }
 
-/*  */
+

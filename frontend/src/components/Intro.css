@@ -1,86 +1,103 @@
-.intro {
+.intro{
   display: flex;
-  flex-direction: row;
-  padding: 30px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-right: -50px;
+  margin-left: 50px;
+  margin-top: 200px;
+
+
 }
-.description {
+.description{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: -30px;
 }
-#label {
-  background-color: #00b5ad;
+
+#label{
+  background-color: #0056B3;
   padding: 5px;
-  padding-right: 20px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  font-family: "Salita";
+  border-radius: 7px ;
+  font-family: 'Salita';
   padding-top: 8px;
   width: fit-content;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  cursor: auto;
 }
-#label:hover {
-  background-color: #007d76;
-  box-shadow: 0 0 15px 5px #00b5ad; /* Add glow effect */
-}
-.intro h1 {
-  font-family: "Salita";
+
+.intro h1{
+  font-family: 'Salita';
   font-size: 64px;
   margin-top: 0;
   margin-bottom: 0;
 }
-.intro #sub-head-1 {
+.intro #sub-head-1{
   color: #795548;
 }
-.intro #sub-head-2 {
-  color: #9c27b0;
+.intro #sub-head-2{
+  color: #9C27B0;
 }
-.intro .btns {
+.btns{
   display: flex;
   flex-direction: row;
   text-align: center;
   gap: 20px;
+  margin-top: 10px;
 }
-.intro #intro-button {
-  background-color: #007aff;
-  font-family: "Salita";
-  padding: 7px;
+
+#intro-button{
+  background-color: #9C27B0;
+  font-family: 'Salita';
+  padding: 10px;
   font-size: 22px;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  text-align: center;
+  
 }
-.intro #intro-button:hover {
-  background-color: #0056b3;
+.intro #intro-button:hover{
+  background-color: #24292E;
+  border: 0.5px solid #9C27B0;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 0 15px 5px #9C27B0;
 }
-.intro #intro-button-github {
-  background-color: #24292e;
-  font-family: "Salita";
+
+.intro #intro-button-github{
+  background-color: #24292E;
+  font-family: 'Salita';
   padding: 8px;
   font-size: 22px;
   border-radius: 5px;
   cursor: pointer;
   color: white;
-  border: 1px solid #9c27b0;
+  border: 1px solid #9C27B0;
   transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+
 }
-.intro p {
-  font-family: "Saira";
+.intro p{
+  font-family: 'Saira';
   font-size: 22px;
   text-overflow: clip;
 }
-.intro #intro-button-github:hover {
-  background-color: #181c20;
-  box-shadow: 0 0 15px 5px #9c27b0; /* Add glow effect */
+.intro #intro-button-github:hover{
+  background-color: #181C20;
+  box-shadow: 0 0 15px 5px #9C27B0; /* Add glow effect */
+
+}
+
+#subtext {
+text-align: justify; /* Justify text to both margins */
+margin-top: 20px; /* Add top margin for spacing */
+margin-bottom: 10px; /* Add bottom margin for spacing */
 }
 
 /* images */
 
-.intro-images .circle-bg {
+.intro-images .circle-bg{
   position: relative;
-  background-image: linear-gradient(45deg, #9c27b0, #ff3b30);
+  background-image:linear-gradient(45deg, #9C27B0, #FF3B30);
   mix-blend-mode: hard-light;
   border-radius: 50%;
   width: 500px;
@@ -92,32 +109,55 @@
   margin-left: 200px;
   transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
-.intro-images .circle-bg:hover {
-  box-shadow: 0 0 15px 5px red; /* Add glow effect */
+.intro-images .circle-bg:hover{
+  box-shadow: 0 0 10px 3px #9C27B0; /* Add glow effect */
 }
 .circle-bg img {
   width: 200px;
   height: 200px;
   position: absolute;
+  border: 1px solid #9C27B0;
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start from below */
+  animation: slideIn 0.8s ease forwards; /* Animation with forward fill mode */
 }
+
 .circle-bg img:nth-child(1) {
   top: 60px;
   right: 120px;
   border-radius: 10px;
-  border: 1px solid #00b5ad;
+  animation-delay: 0.2s; /* Delay for staggered effect */
 }
+
 .circle-bg img:nth-child(2) {
   bottom: 100px;
   right: 50px;
-  border: 1px solid orange;
   border-radius: 5px;
+  animation-delay: 0.4s;
 }
+
 .circle-bg img:nth-child(3) {
   bottom: 150px;
   left: 30px;
   border-radius: 50%;
-  border: 1px solid red;
+  animation-delay: 0.6s;
 }
+
+/* Keyframes for sliding animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+
+
+
 
 @media (prefers-color-scheme: light) {
   .intro #sub-head-1 {
@@ -126,7 +166,7 @@
 }
 @media (min-width: 768px) {
   .intro {
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .intro h1 {
     font-size: 64px;

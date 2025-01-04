@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Features.css";
-import gemini from "../assests/images/gemini.svg"
-import insights from "../assests/images/insights.svg"
-import pattern from "../assests/images/pattern.svg"
-import learning from "../assests/images/learning.svg"
+import gemini from "../assests/images/gemini.svg";
+import insights from "../assests/images/insights.svg";
+import pattern from "../assests/images/pattern.svg";
+import learning from "../assests/images/learning.svg";
+
 const Features = () => {
+  useEffect(() => {
+    const features = document.querySelectorAll(".feature");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    features.forEach((feature) => observer.observe(feature));
+
+    return () => {
+      // Cleanup the observer when the component unmounts
+      features.forEach((feature) => observer.unobserve(feature));
+    };
+  }, []);
+
   return (
     <div className="feature-container">
       <h1>Features</h1>
@@ -18,7 +42,7 @@ const Features = () => {
           </p>
         </div>
         <div className="feature">
-          <img src={insights} alt="feature-1" />
+          <img src={insights} alt="feature-2" />
           <h2>Real Time Insights</h2>
           <p>
             Access up-to-the-minute data and insights, ensuring you stay ahead
@@ -26,7 +50,7 @@ const Features = () => {
           </p>
         </div>
         <div className="feature">
-          <img src={pattern} alt="feature-1" />
+          <img src={pattern} alt="feature-3" />
           <h2>Pattern Recognition</h2>
           <p>
             AI uncovers hidden patterns in your data, revealing trends and
@@ -34,7 +58,7 @@ const Features = () => {
           </p>
         </div>
         <div className="feature">
-          <img src={learning} alt="feature-1" />
+          <img src={learning} alt="feature-4" />
           <h2>Continuous Learning</h2>
           <p>
             AI adapts and improves over time, providing increasingly accurate

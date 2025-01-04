@@ -13,6 +13,11 @@
   }
 }
 
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the color from the parent element */
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -20,10 +25,15 @@
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
-  background-color: #1E1E1E; /* Default dark mode background */
+  background: linear-gradient(90deg, #000000, #2a1733);
   width: 100%;
-  z-index: 1;
+  transition: top 0.3s ease; /* Add transition for smooth hide/show */
 }
+
+.navbar-hidden {
+  top: -100px; /* Adjust this to hide the navbar off-screen */
+}
+
 .navbar-texts {
   display: flex;
   align-items: center;
@@ -33,6 +43,7 @@
 }
 .navbar-texts #brand-logo {
   font-size: 36px;
+  color: #9c27b0;
 }
 .navbar-texts #brand-logo:hover {
   color: #9c27b0;
@@ -42,12 +53,12 @@
 .navbar-texts .navbar-links {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
 .navbar-texts .navbar-links a {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: white; /* Default dark mode text color */
+  font-size: 1.6rem;
+  color: white;
 }
 .navbar-texts .navbar-links a:hover {
   background: linear-gradient(90deg, #ff6b6b, #f94d94);
@@ -56,8 +67,10 @@
   transition: ease-in-out;
 }
 
-.navbar-mode {
+.navbar-mode{
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
 }

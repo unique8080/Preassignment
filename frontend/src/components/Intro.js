@@ -10,7 +10,7 @@ const Intro = () => {
     <div className="intro">
       <div className="description">
         <span id="label">Ai Driven</span>
-        <h1 id="intro-head-1">Beyond <span id="sub-head-1">earth,</span></h1>
+        <h1 id="intro-head-1">Beyond <span id="sub-head-1">insights,</span></h1>
         <h1 id="intro-head-2">Beyond <span id="sub-head-2">imaginations.</span></h1>
         <p id="subtext">
           AstraInsight uses advanced AI to analyze complex data, uncover

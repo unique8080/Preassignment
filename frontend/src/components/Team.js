@@ -8,6 +8,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Arafat from "../assests/images/Arafat.jpeg";
 import Rahul from "../assests/images/rahulpic.jpg";
 
+
 const Team = () => {
   const members = [
     {
@@ -24,9 +25,9 @@ const Team = () => {
     },
     {
       name: "Arafat Chougle",
-      role: "WordPress Developer",
+      role: "Developer",
       description:
-        "Final-year Computer Science student at Vishwakarma University, played a key role in developing the frontend for AstraInsight. With a strong foundation in web technologies, he brought the platform to life using modern design principles, ensuring an intuitive user experience. His expertise in React and UI/UX design was instrumental in delivering a seamless, responsive interface for users.",
+        "Currently in his final year of Computer Science at Vishwakarma University, he played a pivotal role in shaping the AstraInsight platform's frontend. Drawing on his deep understanding of web development, he implemented cutting-edge design strategies to enhance usability. His mastery of React and expertise in crafting user-centric interfaces were essential in building a highly responsive and visually appealing platform.",
       image: Arafat,
       email: "arafatchougle12@gmail.com",
       portfolio: "https://torquick.com/",
@@ -61,7 +62,7 @@ const Team = () => {
   const prevMember = members[prevIndex];
 
   return (
-    <div className="team">
+    <div id="team-section" className="team">
       <h1>Meet the Team</h1>
       <div className="members">
         <div className="member">
@@ -79,7 +80,7 @@ const Team = () => {
           <div className="member-btm-nav">
             <div className="member-links">
               <a
-                href="https://github.com"
+                href={currentMember.github}
                 style={{ color: "none" }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -87,7 +88,7 @@ const Team = () => {
                 <GitHubIcon style={{ fill: "white" }} />
               </a>
               <a
-                href="https://linkedin.com"
+                href={currentMember.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
               >

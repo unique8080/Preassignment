@@ -25,6 +25,9 @@ const Navbar = () => {
   }, [darkMode]);
 
   // Load theme preference from localStorage
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'dark') {
@@ -32,23 +35,27 @@ const Navbar = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "navbar-hidden" : ""}`}>
       <div className="navbar-texts">
-        <a id="brand-logo">Astrainsight</a>
+        <a href="" id="brand-logo">Astrainsight</a>
         <div className="navbar-links">
           <a href="#">Chat</a>
-          <a href="#">Team</a>
+          <a href="#team-section">Team</a>
         </div>
-      </div>
-      <div className="navbar-mode">
-        <img src={darkWhite} alt="dark" />
-        {darkMode ? (
-          <ToggleOnIcon fontSize="large" color="primary" onClick={handleDarkMode} />
-        ) : (
-          <ToggleOffIcon fontSize="large" color="black" onClick={handleDarkMode} />
-        )}
-        <img src={light} alt="light" />
       </div>
     </nav>
   );
